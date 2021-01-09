@@ -12,4 +12,4 @@ A machine learning model webapp to classify messages as one of 36 categories.
 2. Run the following command in the app's directory to run your web app.
     `python run.py`
 
-3. Go to http://0.0.0.0:3001/
+3. Go to http://127.0.0.1:3001/ on your web browser. Enjoy!
