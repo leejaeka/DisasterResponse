@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\disaster_response_pipeline_project",
-    "\\disaster_response_pipeline_project\\app",
     "\\disaster_response_pipeline_project\\data",
     "\\disaster_response_pipeline_project\\models"
   ],
-  "SelectedNode": "\\disaster_response_pipeline_project\\models\\train_classifier.py",
+  "SelectedNode": "\\disaster_response_pipeline_project\\data\\process_data.py",
   "PreviewInSolutionExplorer": false
 }
