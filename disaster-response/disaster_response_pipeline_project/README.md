@@ -1,4 +1,5 @@
 # Disaster Response Pipeline Project
+A machine learning model webapp to classify messages as one of 36 categories. 
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
