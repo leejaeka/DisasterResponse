@@ -1,7 +1,7 @@
 # DisasterResponse
  Disaster messages classifier webapp  
 
-<img src="disaster-response/disaster_response_pipeline_project/app/static/img/main.png">
+<img src="../disaster-response/disaster_response_pipeline_project/app/static/img/main.png">
 ### Examples
 <img src="disaster-response/disaster_response_pipeline_project/app/static/img/ex1.png">
 will output
