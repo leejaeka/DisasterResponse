@@ -1,2 +1,2 @@
 # DisasterResponse
- Disaster messages classifier
+ Disaster messages classifier webapp  
