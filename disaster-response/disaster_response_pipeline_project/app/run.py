@@ -16,6 +16,13 @@ from sqlalchemy import create_engine
 app = Flask(__name__)
 
 def tokenize(text):
+	'''
+	tokenize text into lowercased and stripped and lemmatized list
+	INPUT:
+	text - text to tokenize
+	OUTPUT:
+	clean_tokens - tokenized list
+	'''
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()
 
@@ -40,6 +47,9 @@ model = joblib.load("models/classifier.pkl")
 @app.route('/')
 @app.route('/index')
 def index():
+	'''
+	Create Plotly graphs and render the app with html file
+	'''
 	# extract data needed for visuals
 	count_list = []
 	for col in y:
@@ -61,6 +71,9 @@ def index():
 # web page that handles user query and displays model results
 @app.route('/go')
 def go():
+	'''
+	call functions to calculate classification and render respective html file
+	'''
     # save user input in query
     query = request.args.get('query', '') 
 
