@@ -3,6 +3,7 @@ import re
 import numpy as np
 import pandas as pd
 import nltk
+import joblib
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sqlalchemy import create_engine
@@ -87,8 +88,7 @@ def evaluate_model(model, category_names, X_test, Y_test):
 	category_names - all possible classification 
 	'''
 	y_test_pred = model.predict(X_test)
-	for i in range(len(Y_test.T)):
-		print(category_names[i]+": "+classification_report(Y_test.iloc[:,i], y_test_pred.T[i])+'\n') 
+	print(classification_report(Y_test, y_test_pred, target_names=category_names))
 
 # save model as .pkl file to model_filepath
 def save_model(model, model_filepath):
@@ -115,11 +115,17 @@ def main():
         
 		print('Training model...')
 		model.fit(X_train, Y_train)
+
 		print('Saving model...\n    MODEL: {}'.format(model_filepath))
 		save_model(model, model_filepath)
+		print('Trained model saved!')
+
+		# load model (for testing evaluate_model if model already exist)
+		#model = joblib.load("models/classifier.pkl")
+
 		print('Evaluating model...')
 		evaluate_model(model, category_names, X_test, Y_test)
-		print('Trained model saved!')
+		
 	else:
 		print('Please provide the filepath of the disaster messages database '\
               'as the first argument and the filepath of the pickle file to '\
