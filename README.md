@@ -18,3 +18,5 @@ This correctly output none of the categories
 
 To RUN THE APP head into 'disaster-response' folder -> 'disaster_response_pipeline_project' folder and follow instructions on README.md. <br>
 Note that .pkl file is missing due to its size (2GB). You can generate the model instead by following the instruction above.
+
+Libraries used: pandas, plotly, sqlalchemy, sklearn, pickle, json, nltk, joblib, flask, numpy, re
